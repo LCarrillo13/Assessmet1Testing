@@ -6,9 +6,7 @@ using UnityEngine.TestTools;
 
 public class TestSuite
 {
-
     private GameObject game;
-    
     [UnityTest]
     public IEnumerator AsteroidsMoves()
     {

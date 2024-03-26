@@ -4,31 +4,23 @@ using UnityEngine;
 
 public class Player : SpaceObject
 {
-    public float thrustSpeed = 1;
-
-    public float rotationalSpeed = 1;
-
-   
-    public float maxRotationalSpeed = 10;
+	/// <summary>
+	/// Player Variables
+	/// </summary>
+	public float thrustSpeed = 1;
+	public float rotationalSpeed = 1;
+	public float maxRotationalSpeed = 10;
     public float maxThrustSpeed = 10;
 
     public Transform firingPoint;
     public GameObject bulletPrefab;
     public float bulletSpeed;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     protected override void Update()
     {
 	    base.Update();
 	    GetInput();   
     }
-
     void GetInput()
     {
 	    float torque = Input.GetAxis("Horizontal");
@@ -68,7 +60,6 @@ public class Player : SpaceObject
 	    }
 	    
     }
-
     public void Die()
     {
 	    transform.position = Vector3.zero;
